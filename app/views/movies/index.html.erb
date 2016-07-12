@@ -1,13 +1,27 @@
+<h1>Movie Index</h1>
+<br>
+<ul>
+  <li><a href=/movies/decades/30s>30s</a></li>
+  <li><a href=/movies/40s>40s</a></li>
+  <li><a href=/movies/decades>50s</a></li>
+  <li><a href=/movies/decades>60s</a></li>
+  <li><a href=/movies/decades>70s</a></li>
+  <li><a href=/movies/decades>80s</a></li>
+  <li><a href=/movies/decades>90s</a></li>
+  <li><a href=/movies/decades>00s</a></li>
+  <li><a href=/movies/decades>10s</a></li>
+  <ul>
+<!--   this seems a bit redundant 
+  do a show page? how do we input the decade that they choose to filter it -->
+
 <%@movies.each do |movie|%>
-<h1><%=movie.title%></h1>
-<img src=https://<%="#{movie.image}"%>><br>
-<label>Directed by: </label><%=movie.director%><br>
-<label>Running time: </label><%=movie.running_time%><br>
-<label>Release date: </label><%=movie.date%><br>
-<%unless movie.box_office.empty?%>
-<label>Box Office: </label><%=movie.box_office%><br>
+<div class="posters"> 
+  <a href=/movies/<%="#{movie.id}"%>>
+  <img src=https://<%="#{movie.image}"%> width="300" height="300"> <br>
+  </a>
+</div>
 <%end%>
-<%unless movie.budget.empty?%>
-<label>Budget: </label><%=movie.budget%><br>
-<%end%>
-<%end%>
+
+<!-- - div for poster css 
+- href link to movie show page 
+- display all movie images -->

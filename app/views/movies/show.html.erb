@@ -1,0 +1,11 @@
+<h1><%=@movie.title%></h1>
+<img src=https://<%="#{@movie.image}"%>><br>
+<label>Directed by: </label><%=@movie.director%><br>
+<label>Running time: </label><%=@movie.running_time%><br>
+<label>Release date: </label><%=@movie.date%><br>
+<%unless @movie.box_office.empty?%>
+<label>Box Office: </label><%=@movie.box_office%><br>
+<%end%>
+<%unless @movie.budget.empty?%>
+<label>Budget: </label><%=@movie.budget%><br>
+<%end%>
