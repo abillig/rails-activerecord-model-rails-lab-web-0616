@@ -36,7 +36,7 @@ academy_awards_hashes = []
 
 
 revised.each_with_index do |movie, i|
-  if i < 85 && i > 80
+  if i < 510 && i > 505
 
     
    Movie.create(movie_stats(movie))

@@ -4,14 +4,15 @@ require 'nokogiri'
 require 'open-uri'
 
 require 'openssl'
+
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 
 
 def movie_stats(string)
 
-
-    page = Nokogiri::HTML(open("https://en.wikipedia.org/#{string}"))
+byebug
+    page = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/#{string}"))
 
     title=""
     directed_by_string = ""
@@ -60,6 +61,7 @@ def movie_stats(string)
     columns=[]
 
     page.css("table.infobox.vevent tr").each_with_index do |table, i|
+
     if i==0
       title = table.to_s.split("</th>")[0].split(">")[-1]
     elsif table.to_s.nil? == false && table.to_s.include?("Directed by")
@@ -90,5 +92,8 @@ def movie_stats(string)
     movie_stats = {title: title, starring: starring, date: date, running_time: running_time, 
       director: director, box_office: box_office, budget: budget, image: image}
 
+
 end
+
+puts movie_stats("Finding_Nemo")
 

@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :movies
+  resources :movies, :except => [:show]
+
+  get '/movies/search' => 'movies#search'
+  get '/movies/thirties' => 'movies#thirties' 
+  get '/movies/aughts' => 'movies#aughts'
+  post '/movies' => 'movies#create'
+  get '/movies/:id' => 'movies#show', as: 'movie_path'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

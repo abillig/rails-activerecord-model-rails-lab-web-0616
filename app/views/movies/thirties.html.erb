@@ -1,0 +1,9 @@
+<%@thirties_movies.each do |movie|%>
+<%if movie.image != ""%>
+<div class="posters"> 
+  <a href=/movies/<%="#{movie.id}"%>>
+  <img src=https://<%="#{movie.image}"%> width="300" height="300"> <br>
+  </a>
+</div>
+<%end%>
+<%end%>
