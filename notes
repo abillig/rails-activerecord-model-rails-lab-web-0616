@@ -1,0 +1,35 @@
+
+# 2.2.3 :004 > movie = Movie.new
+#  => #<Movie id: nil, title: nil, starring: nil, date: nil, running_time: nil, director: nil, box_office: nil, budget: nil, image: nil, created_at: nil, updated_at: nil> 
+# 2.2.3 :005 > movie.date = "November 1, 1928"
+#  => "November 1, 1928" 
+# 2.2.3 :006 > movie
+#  => #<Movie id: nil, title: nil, starring: nil, date: "November 1, 1928", running_time: nil, director: nil, box_office: nil, budget: nil, image: nil, created_at: nil, updated_at: nil> 
+# 2.2.3 :007 > date = movie.date
+#  => "November 1, 1928" 
+# 2.2.3 :008 > movie.date
+#  => "November 1, 1928" 
+# 2.2.3 :009 > movie.date[-1]
+#  => "8" 
+# 2.2.3 :010 > movie.date[-2]
+#  => "2" 
+# 2.2.3 :011 > decade = []
+#  => [] 
+# 2.2.3 :012 > decade << movie.date[-2]
+#  => ["2"] 
+# 2.2.3 :013 > decade << movie.date[-1]
+#  => ["2", "8"] 
+# 2.2.3 :014 > decade.join
+#  => "28" 
+# 2.2.3 :015 > decade
+#  => ["2", "8"] 
+# 2.2.3 :016 > decade = decade.join
+#  => "28" 
+
+
+
+movie = Movie.new
+movie_decade = []
+movie_decade << movie.date[-2]
+movie_decade << movie.date[-1]
+movie_decade = movie_decade.join

@@ -27,14 +27,45 @@ class MoviesController < ApplicationController
     redirect_to movie_path @movie
   end
 
-  def thirties 
+  def twenties
+    @twenties_movies = Movie.where('date like ?', '%192%')
+  end
+
+ def thirties 
     @thirties_movies = Movie.where('date like ?', '%193%')
   end
 
-  def aughts 
+  def forties 
+    @forties_movies = Movie.where('date like ?', '%194%')
+  end
+
+  def fifties 
+    @fifties_movies = Movie.where('date like ?', '%195%')
+  end
+
+  def sixties 
+    @sixties_movies = Movie.where('date like ?', '%196%')
+  end
+
+  def seventies 
+    @seventies_movies = Movie.where('date like ?', '%197%')
+  end
+
+  def eighties 
+    @eighties_movies = Movie.where('date like ?', '%198%')
+  end
+
+  def nineties
+    @nineties_movies = Movie.where('date like ?', '%199%')
+  end
+
+   def aughts 
     @aughts_movies = Movie.where('date like ?', '%200%')
   end
 
+  def twentytens 
+    @twentytens_movies = Movie.where('date like ?', '%201%')
+  end
 # Movie.where('date like ?', '%201%')
 
   private 

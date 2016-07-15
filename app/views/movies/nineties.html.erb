@@ -1,7 +1,7 @@
-<h3>The 1960s</h3>
+<h3>The 1990s</h3>
 <%= button_to 'Index', movies_path, method: 'get' %>
 <br>
-<%@thirties_movies.each do |movie|%>
+<%@nineties_movies.each do |movie|%>
 <%if movie.image != ""%>
 <div class="posters"> 
   <a href=/movies/<%="#{movie.id}"%>>

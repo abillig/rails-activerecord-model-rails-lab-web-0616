@@ -9,3 +9,8 @@
 <%unless @movie.budget.empty?%>
 <label>Budget: </label><%=@movie.budget%><br>
 <%end%>
+<br>
+<%= button_to 'Index', movies_path, method: 'get' %>
+<br>
+<%= button_to 'Search', movies_search_path, method: 'get' %>
+<br>

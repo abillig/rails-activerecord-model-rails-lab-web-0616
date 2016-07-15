@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
   resources :movies, :except => [:show]
-
-  get '/movies/search' => 'movies#search'
-  get '/movies/thirties' => 'movies#thirties' 
+  get '/movies/twenties' => 'movies#twenties' 
+  get '/movies/thirties' => 'movies#thirties'
+  get '/movies/forties' => 'movies#forties' 
+  get '/movies/fifties' => 'movies#fifties'
+  get '/movies/sixties' => 'movies#sixties'
+  get '/movies/seventies' => 'movies#seventies'
+  get '/movies/eighties' => 'movies#eighties'
+  get '/movies/nineties' => 'movies#nineties'  
   get '/movies/aughts' => 'movies#aughts'
+  get '/movies/twentytens' => 'movies#twentytens'
+  
+  get '/movies/search' => 'movies#search'
   post '/movies' => 'movies#create'
   get '/movies/:id' => 'movies#show', as: 'movie_path'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,18 +1,18 @@
 <h1>Movie Index</h1>
+<%= button_to 'Search', movies_search_path, method: 'get' %>
 <br>
 <ul>
-  <li><a href=/movies/decades/30s>30s</a></li>
-  <li><a href=/movies/40s>40s</a></li>
-  <li><a href=/movies/decades>50s</a></li>
-  <li><a href=/movies/decades>60s</a></li>
-  <li><a href=/movies/decades>70s</a></li>
-  <li><a href=/movies/decades>80s</a></li>
-  <li><a href=/movies/decades>90s</a></li>
-  <li><a href=/movies/decades>00s</a></li>
-  <li><a href=/movies/decades>10s</a></li>
+  <li><a href=/movies/twenties>1920s</a></li>
+  <li><a href=/movies/thirties>1930s</a></li>
+  <li><a href=/movies/forties>1940s</a></li>
+  <li><a href=/movies/fifties>1950s</a></li>
+  <li><a href=/movies/sixties>1960s</a></li>
+  <li><a href=/movies/seventies>1970s</a></li>
+  <li><a href=/movies/eighties>1980s</a></li>
+  <li><a href=/movies/nineties>1990s</a></li>
+  <li><a href=/movies/aughts>2000s</a></li>
+  <li><a href=/movies/twentytens>2010s</a></li>
   <ul>
-<!--   this seems a bit redundant 
-  do a show page? how do we input the decade that they choose to filter it -->
 
 <%@movies.each do |movie|%>
 <%if movie.image != ""%>
